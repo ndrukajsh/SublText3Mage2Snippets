@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+	/**
+	 * ${1:Vendor} Software.
+	 *
+	 * @category  ${1:Vendor}
+	 * @package   ${1:Vendor}_${2:Module}
+	 * @author    ${1:Vendor}
+	 * @copyright Copyright (c) 2010-2018 ${1:Vendor} Software Private Limited (https://${1:Vendor}.com)
+	 * @license   https://store.${1:Vendor}.com/license.html
+	 */
+	\Magento\Framework\Component\ComponentRegistrar::register(
+	    \Magento\Framework\Component\ComponentRegistrar::MODULE,
+	    '${1:Vendor}_${2:Module}',
+	    __DIR__
+	);
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>regis</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

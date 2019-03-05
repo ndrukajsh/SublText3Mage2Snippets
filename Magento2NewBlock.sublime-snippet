@@ -1,0 +1,31 @@
+<snippet>
+	<content><![CDATA[
+namespace ${1:Vendor}\\${2:Module}\Block\\${3:Namespace};
+
+use \Magento\Framework\View\Element\Template\Context;
+
+class ${4:ClassName} extends \Magento\Framework\View\Element\Template
+{
+
+    public function __construct(
+        Context \$context,
+        array \$data = []
+    ) {
+        parent::__construct(\$context, \$data);
+    }
+
+	public function ${5:method_name}(${6:}){
+		${7:}
+	}
+
+}
+
+
+
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>newBlock</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

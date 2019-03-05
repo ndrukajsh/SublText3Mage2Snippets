@@ -1,0 +1,27 @@
+<snippet>
+	<content><![CDATA[
+
+namespace ${1:this}\\${2:snippet}\Observer;
+
+use Magento\Framework\Event\ObserverInterface;
+use \Magento\Framework\App\RequestInterface;
+use \Magento\Framework\Event\Observer;
+
+class ${3:snippet} implements ObserverInterface
+{
+    public function execute(Observer \$observer) {
+        /** @var \Magento\Catalog\Model\Product \$product */
+        \$product = \$observer->getEvent()->getDataByKey('product');
+        /** @var \Magento\Quote\Model\Quote\Item \$item */
+        \$item = \$this->_checkoutSession->getQuote()->getItemByProduct(\$product);
+        \$itemId = \$item->getId();
+
+        return \$this;
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>newObserver</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>

@@ -1,0 +1,32 @@
+<snippet>
+	<content><![CDATA[
+namespace ${1:Vendor}\\${2:Module}\Controller\\${3:Namespace};
+use Magento\Framework\App\Action\Action;
+use Magento\Framework\App\Action\Context;
+use Magento\Framework\View\Result\PageFactory;
+
+class ${4:ClassName} extends Action
+{
+    protected \$_resultPageFactory;
+
+    public function __construct(
+        Context \$context,
+        PageFactory \$resultPageFactory
+    ) {
+        \$this->_resultPageFactory = \$resultPageFactory;
+        parent::__construct(\$context);
+    }
+
+    public function execute() {
+        \$resultPage = \$this->_resultPageFactory->create();
+        \$resultPage->getConfig()->getTitle()->set(__('${5:PageTitle}'));
+
+        return \$resultPage;
+    }
+}
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>newController</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.php</scope>
+</snippet>
