@@ -1,9 +1,9 @@
 <snippet>
 	<content><![CDATA[
-		$this->getLayout()
-            ->createBlock('${1:BlockNameSpace}')
-            ->setTemplate('${2:ModuleName}::${3:templatePath}')
-            ->toHtml() 
+\$this->getLayout()
+    ->createBlock('${1:BlockNameSpace}')
+    ->setTemplate('${2:ModuleName}::${3:templatePath}')
+    ->toHtml()
 ]]></content>
 	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
 	<tabTrigger>tohtml</tabTrigger>
